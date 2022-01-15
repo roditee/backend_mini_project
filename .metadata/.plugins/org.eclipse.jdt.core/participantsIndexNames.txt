@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\backendProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2817633515.index
+\spring_boot_backend_mini_project\src\main\java
+C:\backendProject\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\946925013.index
+\spring_boot_backend_mini_project\src\main\java

@@ -7,10 +7,10 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="./css/join.css">
 		<title>KIRRIKKIRI 회원가입</title>
-		<script src="js/jquery-3.6.0.min.js"></script>
-		<script type="text/javascript" src="./js/formCheck .js"></script>
+		<link href="<c:url value='/css/join.css'/>" rel="stylesheet" type="text/css">	
+		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+		<script src="<c:url value='/js/formCheck.js'/>"></script>
 		<script src="https://kit.fontawesome.com/2d323a629b.js"crossorigin="anonymous"></script>
 	</head>
 	<body>
@@ -24,7 +24,7 @@
 					<h2 align="center">회원가입</h2>
 					<br>
 					<hr>
-					<form name="joinForm" id="joinForm" method="post" action="index.html">
+					<form name="joinForm" id="joinForm" method="post" action="/">
 						<div class="container">
 							<div class="insert">
 								<table>
@@ -58,14 +58,14 @@
 									</tr>
 									<tr>
 										<td class="col1">이메일</td>
-										<td class="col2"><input type="text" name="mailid">
-											<span class="a">@</span> <input type="text" name="email">
-											<select name="mailslc">
+										<td class="col2"><input type="text" name="mailid" id="mailid">
+											<span class="a">@</span> <input type="text" name="email" id="email">
+											<select id=selectEmail name="selectEmail">
 												<option value="self" selected>직접입력</option>
-												<option value="naver">naver.com</option>
-												<option value="gm">gmail.com</option>
-												<option value="da">daum.com</option>
-												<option value="yah">yahoo.com</option>
+												<option value="naver.com">naver.com</option>
+												<option value="gmail.com">gmail.com</option>
+												<option value="daum.com">daum.com</option>
+												<option value="yahoo.com">yahoo.com</option>
 										</select> <input class='btn2' type="button" value="이메일 중복확인" onclick="">
 										</td>
 									</tr>
@@ -263,7 +263,7 @@
 										</td>
 									</tr>
 								<tr>
-									<td class="col1">동의</td>
+									<td class="col1">약관 동의</td>
 									<td align="center">
 									<br>
 										<div class="agreebox" style="overflow:scroll; width:600px; height:200px; background-color:white">

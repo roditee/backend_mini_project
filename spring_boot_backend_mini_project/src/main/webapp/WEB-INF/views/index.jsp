@@ -194,7 +194,7 @@
 	                        <ul class="class-list" data-position="0">
 	                            <li class="class-card">
 	                                <img src="./image/ss1.webp" alt="top1" class="class-image" />
-	                                <a href="./sub_Post.html" target="_blank">
+	                                <a href="/post" target="_blank">
 	                                    <div class="class-container">
 	                                        <div class="class-skill">
 	                                        <div class="class-type">INTP</div>
@@ -209,7 +209,7 @@
 	                            </li>
 	                            <li class="class-card">
 	                                <img src="./image/ss2.webp" alt="top1" class="class-image" />
-	                                <a href="./sub_Post.html" target="_blank">
+	                                <a href="/post" target="_blank">
 	                                    <div class="class-container">
 	                                        <div class="class-skill">
 	                                        <div class="class-type">ENFJ</div>
@@ -224,7 +224,7 @@
 	                            </li>
 	                            <li class="class-card">
 	                                <img src="./image/ss3.webp" alt="top1" class="class-image" />
-	                                <a href="./sub_Post.html" target="_blank">
+	                                <a href="/post" target="_blank">
 	                                    <div class="class-container">
 	                                        <div class="class-skill">
 	                                        <div class="class-type">ENTP</div>
@@ -239,7 +239,7 @@
 	                            </li>
 	                            <li class="class-card">
 	                                <img src="./image/ss4.webp" alt="top1" class="class-image" />
-	                                <a href="./sub_Post.html" target="_blank">
+	                                <a href="/post" target="_blank">
 	                                    <div class="class-container">
 	                                        <div class="class-skill">
 	                                        <div class="class-type">ENTJ</div>
@@ -254,7 +254,7 @@
 	                            </li>
 	                            <li class="class-card">
 	                                <img src="./image/ss5.webp" alt="top1" class="class-image" />
-	                                <a href="./sub_Post.html" target="_blank">
+	                                <a href="/post" target="_blank">
 	                                    <div class="class-container">
 	                                        <div class="class-skill">
 	                                        <div class="class-type">ESTP</div>
@@ -269,7 +269,7 @@
 	                            </li>
 	                            <li class="class-card">
 	                                <img src="./image/ss6.webp" alt="top1" class="class-image" />
-	                                <a href="./sub_Post.html" target="_blank">
+	                                <a href="/post" target="_blank">
 	                                    <div class="class-container">
 	                                        <div class="class-skill">
 	                                        <div class="class-type">ESTJ</div>
@@ -289,7 +289,7 @@
 	                            <ul class="class-list" data-position="0">
 	                                <li class="class-card">
 	                                    <img src="./image/ss7.webp" alt="top1" class="class-image" />
-	                                    <a href="./sub_Post.html" target="_blank">
+	                                    <a href="/post" target="_blank">
 	                                        <div class="class-container">
 	                                            <div class="class-skill">
 	                                            <div class="class-type">ENTP</div>
@@ -304,7 +304,7 @@
 	                                </li>
 	                                <li class="class-card">
 	                                    <img src="./image/ss8.jpg" alt="top1" class="class-image" />
-	                                    <a href="./sub_Post.html" target="_blank">
+	                                    <a href="/post" target="_blank">
 	                                        <div class="class-container">
 	                                            <div class="class-skill">
 	                                            <div class="class-type">ISFJ</div>
@@ -319,7 +319,7 @@
 	                                </li>
 	                                <li class="class-card">
 	                                    <img src="./image/ss9.jpg" alt="top1" class="class-image" />
-	                                    <a href="./sub_Post.html" target="_blank">
+	                                    <a href="/post" target="_blank">
 	                                        <div class="class-container">
 	                                            <div class="class-skill">
 	                                            <div class="class-type">ESFP</div>
@@ -334,7 +334,7 @@
 	                                </li>
 	                                <li class="class-card">
 	                                    <img src="./image/ss10.jpg" alt="top1" class="class-image" />
-	                                    <a href="./sub_Post.html" target="_blank">
+	                                    <a href="/post" target="_blank">
 	                                        <div class="class-container">
 	                                            <div class="class-skill">
 	                                            <div class="class-type">ISTP</div>
@@ -349,7 +349,7 @@
 	                                </li>
 	                                <li class="class-card">
 	                                    <img src="./image/ss11.jpg" alt="top1" class="class-image" />
-	                                    <a href="./sub_Post.html" target="_blank">
+	                                    <a href="/post" target="_blank">
 	                                        <div class="class-container">
 	                                            <div class="class-skill">
 	                                            <div class="class-type">ESTJ</div>
@@ -364,7 +364,7 @@
 	                                </li>
 	                                <li class="class-card">
 	                                    <img src="./image/ss12.webp" alt="top1" class="class-image" />
-	                                    <a href="./sub_Post.html" target="_blank">
+	                                    <a href="/post" target="_blank">
 	                                        <div class="class-container">
 	                                            <div class="class-skill">
 	                                            <div class="class-type">ISTP</div>
@@ -389,7 +389,7 @@
 	                        <ul class="class-list" data-position="0">
 	                            <li class="class-card2">
 	                                <img src="./image/ss13.webp" alt="top1" class="class-image2" />
-	                                <a href="./sub_Post.html" target="_blank">
+	                                <a href="/post" target="_blank">
 	                                    <div class="class-container">
 	                                        <div class="class-skill">
 	                                        <div class="class-type">ISTP</div>
@@ -404,7 +404,7 @@
 	                            </li>
 	                            <li class="class-card2">
 	                                <img src="./image/ss14.webp" alt="top1" class="class-image2" />
-	                                <a href="./sub_Post.html" target="_blank">
+	                                <a href="/post" target="_blank">
 	                                    <div class="class-container">
 	                                        <div class="class-skill">
 	                                        <div class="class-type">ESFP</div>
@@ -419,7 +419,7 @@
 	                            </li>
 	                            <li class="class-card2">
 	                                <img src="./image/ss15.webp" alt="top1" class="class-image2" />
-	                                <a href="./sub_Post.html" target="_blank">
+	                                <a href="/post" target="_blank">
 	                                    <div class="class-container">
 	                                        <div class="class-skill">
 	                                        <div class="class-type">ENTP</div>

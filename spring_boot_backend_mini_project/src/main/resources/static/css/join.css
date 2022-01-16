@@ -11,6 +11,9 @@
   visibility: hidden;
 }
 
+hr {
+	margin:20px 0;
+}
 div.create {
   width: 800px;
   text-align: center;

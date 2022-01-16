@@ -7,11 +7,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/login.css">
     <title>KIRRIKKIRI 로그인</title>
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <link href="<c:url value='/css/login.css'/>" rel="stylesheet" type="text/css">	
+		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+		<script src="<c:url value='/js/login.js'/>"></script>
     <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
-    <script src="js/login.js"></script>
     </head>
 <body>
     <div id="wrap">
@@ -23,7 +23,7 @@
             <div id="loginHeader">
                 <img id="loginLogoImg" src="./image/KIRRI.png"><span id="loginLogoText">Login</span>
             </div>
-            <form id="loginForm" action="index.html">
+            <form id="loginForm" action="/">
                 <p id="loginError"></p>
                 <input type="text" name="id" id="id" placeholder="아이디">
                 <input type="password" name="pw" id="pw" placeholder="비밀번호">
@@ -31,7 +31,7 @@
             </form>
             <div id="loginAnchor">
                 <a href="#">아이디/비밀번호 찾기</a>
-                <a href="./join.html">회원가입</a>
+                <a href="/join">회원가입</a>
             </div>
             <div id="socialLiogin">
                 <p>social Login</p>

@@ -7,9 +7,10 @@
 		<meta charset="UTF-8">
 	   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="./css/myFeed.css">
-		<title>My Feed</title>
-		<script src="js/myFeed.js"></script>
+			<title>My Feed</title>
+			<link href="<c:url value='/css/myFeed.css'/>" rel="stylesheet" type="text/css">	
+			<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+			<script src="<c:url value='/js/myFeed.js'/>"></script>
 	</head>
 	<body>
 		<div id="wrap">
@@ -79,17 +80,17 @@
 							<img id="nextWish" src="image/nextButton.png">
 	                    </div>
 	                    <div id="wishList">
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg00.jpg"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg03.png"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg05.jpg"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg19.jpg"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg11.jpg"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg14.jpg"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg07.jpeg"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg02.jpg"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg06.jpeg"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg17.png"></a>
-	                        <a href="./sub_Post.html"><img class="wishItems" src="image/itemsImg15.jpg"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg00.jpg"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg03.png"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg05.jpg"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg19.jpg"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg11.jpg"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg14.jpg"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg07.jpeg"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg02.jpg"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg06.jpeg"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg17.png"></a>
+	                        <a href="/post"><img class="wishItems" src="image/itemsImg15.jpg"></a>
 	                    </div>
 	                </div>
 	            </article>
@@ -97,18 +98,18 @@
 	                <div id="myPostGroup">
 	                    <h1>내 게시글</h1>
 	                    <div id="postList">
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg18.png"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg15.jpg"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg11.jpg"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg01.jpg"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg10.jpeg"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg03.png"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg06.jpeg"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg02.jpg"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg00.jpg"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg08.jpeg"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg07.jpeg"></a>
-	                        <a href="./sub_myFeed.html"><img class="postItems" src="image/itemsImg13.jpg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg18.png"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg15.jpg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg11.jpg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg01.jpg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg10.jpeg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg03.png"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg06.jpeg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg02.jpg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg00.jpg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg08.jpeg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg07.jpeg"></a>
+	                        <a href="/post"><img class="postItems" src="image/itemsImg13.jpg"></a>
 	                    </div>
 	                    <div id="seeMoreBox"><button id="seeMore">See More</button></div>
 	                </div>

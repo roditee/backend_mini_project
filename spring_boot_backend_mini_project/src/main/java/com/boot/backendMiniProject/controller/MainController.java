@@ -35,4 +35,9 @@ public class MainController {
 	public String post() {
 		return "/post";
 	}
+	
+	@RequestMapping("/chatbot")
+	public String chatbot() {
+		return "/chatbot";
+	}
 }

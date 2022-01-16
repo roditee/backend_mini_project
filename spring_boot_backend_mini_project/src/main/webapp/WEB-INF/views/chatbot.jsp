@@ -6,9 +6,9 @@
 	<head>
 		<meta charset="UTF-8">		
 		<title>응용 예제 : 챗봇 대화창</title>
-		<link href="./css/chatbot.css" rel="stylesheet">
-		<script src= "./js/jquery-3.6.0.min.js"></script>
-		<script src= "./js/chatbot.js"></script>
+		<link href="<c:url value='/css/chatbot.css'/>" rel="stylesheet" type="text/css">	
+		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+		<script src="<c:url value='/js/chatbot.js'/>"></script>
 	</head>
 	<body>
 		<div id="wrap">

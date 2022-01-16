@@ -7,16 +7,17 @@
 	    <meta charset="UTF-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <link rel="stylesheet" href="./css/common.css">
-	    <link rel="stylesheet" href="./css/menu.css">
-	    <link rel="stylesheet" href="./css/mainBanner.css">
-	    <link rel="stylesheet" href="./css/section.css">
 	    <title>KIRRIKKIRI : MBTI 기반 정보 공유</title>
-	    <script src="js/jquery-3.6.0.min.js"></script>
-	    <script src="js/main.js"></script>
-	    <script src="js/menu.js"></script>
-	    <script src="js/chatbot.js"></script>
-	    <script src="js/mainBanner.js"></script>
+	    <link href="<c:url value='/css/common.css'/>" rel="stylesheet" type="text/css">
+	    <link href="<c:url value='/css/menu.css'/>" rel="stylesheet" type="text/css">	
+	    <link href="<c:url value='/css/mainBanner.css'/>" rel="stylesheet" type="text/css">	
+	    <link href="<c:url value='/css/section.css'/>" rel="stylesheet" type="text/css">	
+			<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+			<script src="<c:url value='/js/main.js'/>"></script>
+			<script src="<c:url value='/js/menu.js'/>"></script>
+			<script src="<c:url value='/js/chatbot.js'/>"></script>
+			<script src="<c:url value='/js/mainBanner.js'/>"></script>
+			
 	    <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
     </head>
 	<body>

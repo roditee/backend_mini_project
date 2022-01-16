@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;spring_boot_backend_mini_project/src/main/resources/static/js/formCheck .js&apos; to &apos;formCheck.js&apos;" description="Rename resource &apos;formCheck .js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/static/js/formCheck .js" name="formCheck.js" stamp="1642317668388" updateReferences="true"/>
+</session>

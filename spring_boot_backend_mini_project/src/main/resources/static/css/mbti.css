@@ -106,14 +106,13 @@ p {
 
 .main {
   margin: 10px auto;
-  height: 363px; /* 화면 이미지 고정 */
+  height: 363px;
   background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FJt4l4%2FbtroNIuqRZW%2FZeFUea80kyHKtlwkcZ4pQ0%2Fimg.jpg");
-  background-position: center 30%; /* 이미지 위치를 살짝 위로 올리기 위한 position 설정 */
+  background-position: center 30%;
   background-repeat: no-repeat;
   z-index: 0;
 }
 
-/* 배경 이미지에 색상을 어둡게 하기 위해, 어두운 색상으로 이미지 상위에 투명도를 주어 덮어씌움 */
 .main-container {
   width: 16%;
   height: 75%;
@@ -143,7 +142,7 @@ img {
 
 .black_overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0%;
   left: 0%;
   width: 100%;

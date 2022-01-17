@@ -1,0 +1,54 @@
+@charset "EUC-KR";
+
+#cartBox{
+	width: 80%;
+	height:1000px;
+	background:#bdccb2;
+}
+
+#cartListBox {
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	background:#bdccb2;
+}
+
+form {
+	text-align: center;
+}
+
+table {
+	margin: 20px auto 0 auto;
+	width:900px;
+	color:white;
+}	
+
+tr {
+	height:50px;
+}
+
+th, td {
+	border:solid gray 1px;
+	padding:10px;
+}	
+
+input {
+	text-align:center;
+}
+
+#cartDeleteBox {
+	width:100%;
+	height:70px;
+	padding: 26px 160px;
+  margin-top: 25px;
+  color:white;
+}
+
+#allCheckBox {
+	float:left;
+}
+
+#deleteCart {
+	float:right;
+}
+

@@ -1,0 +1,15 @@
+package com.boot.backendMiniProject.service;
+
+import java.util.HashMap;
+
+import com.boot.backendMiniProject.model.MemberVO;
+
+public class MemberService implements IMemberService {
+
+	@Override
+	public MemberVO loginCheck(HashMap<String, Object> map) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

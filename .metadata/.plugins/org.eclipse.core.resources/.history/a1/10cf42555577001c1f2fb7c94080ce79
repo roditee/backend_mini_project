@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>장바구니</title>
+		<link href="<c:url value='/css/cart.css'/>" rel="stylesheet" type="text/css">	
+		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+		<script src="<c:url value='/js/cart.js'/>"></script>
+	</head>
+	<body>
+		<div id="wrap">
+		
+			<!-- TOP -->
+			<jsp:include page="/WEB-INF/views/layout/top.jsp" flush='true'/>
+			
+			<section>
+				<div id="cartBox">
+					<div id="cartListBox">ddd</div>
+					<div id="cartPriceBox">ddd</div>
+				</div>
+			</section>
+			
+			<!-- BOTTOM -->
+			<jsp:include page="/WEB-INF/views/layout/bottom.jsp" flush='true'/>
+			
+		</div>
+	</body>
+</html>

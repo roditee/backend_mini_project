@@ -1,0 +1,15 @@
+@charset "EUC-KR";
+
+#cartListBox {
+	float:left;
+	width:500px;
+	height:600px;
+	background:blue;
+}
+
+#cartPriceBox {
+	float:right;
+	width:500px;
+	height:600px;
+	background:blue;
+}

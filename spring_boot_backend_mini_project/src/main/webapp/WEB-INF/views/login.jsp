@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +12,8 @@
 		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 		<script src="<c:url value='/js/login.js'/>"></script>
     <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
-    </head>
-<body>
+	</head>
+	<body>
     <div id="wrap">
         
         <!-- TOP -->
@@ -23,10 +23,10 @@
             <div id="loginHeader">
                 <img id="loginLogoImg" src="./image/KIRRI.png"><span id="loginLogoText">Login</span>
             </div>
-            <form id="loginForm" action="/">
+            <form id="loginForm">
                 <p id="loginError"></p>
                 <input type="text" name="id" id="id" placeholder="아이디">
-                <input type="password" name="pw" id="pw" placeholder="비밀번호">
+                <input type="password" name="pwd" id="pwd" placeholder="비밀번호">
                 <input type="submit" name="submit" id="submit" value="로그인">
             </form>
             <div id="loginAnchor">
@@ -47,5 +47,5 @@
 		<jsp:include page="/WEB-INF/views/layout/bottom.jsp" flush='true'/>
 		
     </div>
-</body>
+	</body>
 </html>

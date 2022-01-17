@@ -40,4 +40,9 @@ public class MainController {
 	public String chatbot() {
 		return "/chatbot";
 	}
+	
+	@RequestMapping("/cart")
+	public String cart() {
+		return "/cart";
+	}
 }

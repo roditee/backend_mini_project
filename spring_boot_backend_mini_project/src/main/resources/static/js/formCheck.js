@@ -3,6 +3,16 @@
  */
 
 window.onload = function() {
+	// 이메일 select
+	$('select[name=selectEmail]').change(function() {
+			if($(this).val()=="self"){
+				$('#email').val("");
+			} else {
+				$('#email').val($(this).val());
+				$("#email").attr("readonly", true);
+			}
+	});
+	
 	document.getElementById('joinForm').onsubmit = function() {
 		// name
 		var errMsgName = document.getElementById('nameError');
@@ -89,27 +99,6 @@ window.onload = function() {
 		if(password.value != ""){
 			errMsgPw.style.visibility = 'hidden';
 		}
-		
-		// 이메일
-		var mailid = document.getElementById('mailid');
-		var email = document.getElementById('email');
-		if(mailid.value == "" || email.value == "") {
-			alert("이메일을 입력하세요.");
-			mailid.focus();
-			document.location.href='#mailid';
-			return false;
-		}
-		
-		var selectEmail = document.getElementById('selectEmail');
-		selectEmail.change(function() {
-			if($(this).val()=="self"){
-				email.value = "";
-			} else {
-				email.value = $(this).val();
-				email.attr("readonly", true);
-			}
-			return false;
-		});
 
 		// 이메일 수신 여부
 		var mailChk = false; 

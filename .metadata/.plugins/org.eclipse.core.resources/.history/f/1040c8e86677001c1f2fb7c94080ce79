@@ -1,0 +1,16 @@
+package com.boot.backendMiniProject.model;
+
+public class MemberVO {
+	private String memName;
+	private String memId;
+	private String memPw;
+	private String memEmail;
+	private String emailRcv;
+	private String memBirth;
+	private String memPhone;
+	private String memAddress;
+	private String memMBTI;
+	private String memKeyword;
+	private String agreement1;
+	private String agreement2;
+}

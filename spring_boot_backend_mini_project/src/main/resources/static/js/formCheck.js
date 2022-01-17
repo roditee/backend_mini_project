@@ -6,10 +6,11 @@ window.onload = function() {
 	// 이메일 select
 	$('select[name=selectEmail]').change(function() {
 			if($(this).val()=="self"){
-				$('#email').val("");
+				$('#memEmail').val("");
+				$("#memEmail").attr("readonly", false);
 			} else {
-				$('#email').val($(this).val());
-				$("#email").attr("readonly", true);
+				$('#memEmail').val($(this).val());
+				$("#memEmail").attr("readonly", true);
 			}
 	});
 	

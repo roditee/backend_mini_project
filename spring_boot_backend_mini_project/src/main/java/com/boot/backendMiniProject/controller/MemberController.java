@@ -42,4 +42,37 @@ public class MemberController {
 		session.invalidate();
 		return "redirect:/";
 	}
+	
+	// 사용자 아이디 중복 확인
+	@ResponseBody
+	@RequestMapping("/memIdCheck")
+	public String memIdCheck(@RequestParam("memId") String memId) {
+		String memId_result = service.memIdCheck(memId);
+		
+		String result = "use";
+		if(memId_result != null)
+			result = "no_use";
+		
+		return result;
+	}
+	
+	// 사용자 아이디 중복 확인
+	@ResponseBody
+	@RequestMapping("/memEmailCheck")
+	public String memEmailCheck(@RequestParam("memEmail") String memEmail) {
+		String memEmail_result = service.memEmailCheck(memEmail);
+		
+		String result = "use";
+		if(memEmail_result != null)
+			result = "no_use";
+		
+		return result;
+	}
+	
+	// 회원가입
+	@RequestMapping("/memJoin")
+	public String memJoin(MemberVO vo) {
+		service.memJoin(vo);
+		return "redirect:/";
+	}
 }

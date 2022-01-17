@@ -9,4 +9,25 @@
 		<select id="loginCheck" parameterType="hashmap" resultType="com.boot.backendMiniProject.model.MemberVO">
 			SELECT memId FROM member WHERE memId=#{id} and memPwd=#{pwd}
 		</select>
+		
+		<!-- ID 중복 확인 -->
+		<select id="memIdCheck" resultType="string" parameterType="string">
+			SELECT memId FROM member WHERE memId =#{memId}
+		</select>
+		
+		<!-- Email 중복 확인 -->
+		<select id="memEmailCheck" resultType="string" parameterType="string">
+			DECLARE @emailId VARCHAR(20) = #{memEmailId}
+			DECLARE @emailChar VARCHAR(20) = '@'
+			DECLARE @email VARCHAR(20) = #{memEmail}
+			
+			SELECT memEmail
+			FROM member
+			WHERE memEmail = CONCAT(@emailId, @emailChar, @email)
+		</select>
+		
+		<!-- 회원가입 -->
+		<insert id="memJoin" parameterType="com.boot.backendMiniProject.model.MemberVO">
+			INSERT INTO member(memId, memPwd, memName) VALUES (#{memId}, #{memPwd}, #{memName})
+		</insert>
   </mapper>

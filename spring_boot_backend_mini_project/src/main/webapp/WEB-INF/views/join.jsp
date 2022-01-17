@@ -11,6 +11,8 @@
 		<link href="<c:url value='/css/join.css'/>" rel="stylesheet" type="text/css">	
 		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 		<script src="<c:url value='/js/formCheck.js'/>"></script>
+		<script src="<c:url value='/js/memIdCheck.js'/>"></script>
+		<script src="<c:url value='/js/memEmailCheck.js'/>"></script>
 		<script src="https://kit.fontawesome.com/2d323a629b.js"crossorigin="anonymous"></script>
 	</head>
 	<body>
@@ -24,7 +26,7 @@
 					<h2 align="center">회원가입</h2>
 					<br>
 					<hr>
-					<form name="joinForm" id="joinForm" method="post" action="/">
+					<form name="joinForm" id="joinForm" method="post" action="<c:url value='/memJoin'/>">
 						<div class="container">
 							<div class="insert">
 								<table>
@@ -32,20 +34,20 @@
 									<tr>
 										<td class="col1">성명</td>
 										<td class="col2">
-											<input type="text" name="name"  maxlength="5" id="name" placeholder="성명">
+											<input type="text" name="memName"  maxlength="5" id="memName" placeholder="성명">
 											<p id="nameError" class="errMsg" value=""></p>
 										</td>
 									</tr>
 									<tr>
 										<td class="col1">아이디</td>
-										<td class="col2"><input type="text" name="id" maxlength="10" id="idCheck" value="" placeholder="아이디">
-											<input class='btn1' type="button" value="중복확인" onclick="">
+										<td class="col2"><input type="text" name="memId" maxlength="10" id="memId" value="" placeholder="아이디">
+											<input class='btn1' id="idCheck" type="button" value="중복확인">
 											<p id="idError" class="errMsg" value=""></p>
 										</td>
 									</tr>
 									<tr>
 										<td class="col1">비밀번호</td>
-										<td class="col2"><input type="password" name="pwd" maxlength="16" id="password" placeholder="비밀번호">
+										<td class="col2"><input type="password" name="memPwd" maxlength="16" id="memPwd" placeholder="비밀번호">
 											<p id="pwError" class="errMsg">
 												※ 비밀번호는 <span class="num">문자, 숫자, 특수문자(~!@#$%^&*)의 조합
 													10 ~ 16자리</span>로 입력하세요.
@@ -54,19 +56,19 @@
 									</tr>
 									<tr>
 										<td class="col1">비밀번호 확인</td>
-										<td class="col2"><input type="password" name="pwdCheck" maxlength="16" id="passwordCheck" placeholder="비밀번호 확인"></td>
+										<td class="col2"><input type="password" name="pwdCheck" maxlength="16" id="pwdCheck" placeholder="비밀번호 확인"></td>
 									</tr>
 									<tr>
 										<td class="col1">이메일</td>
-										<td class="col2"><input type="text" name="mailid" id="mailid">
-											<span class="a">@</span> <input type="text" name="email" id="email">
+										<td class="col2"><input type="text" name="memEmailId" id="memEmailId">
+											<span class="a">@</span> <input type="text" name="memEmail" id="memEmail">
 											<select id=selectEmail name="selectEmail">
 												<option value="self" selected>직접입력</option>
 												<option value="naver.com">naver.com</option>
 												<option value="gmail.com">gmail.com</option>
 												<option value="daum.com">daum.com</option>
 												<option value="yahoo.com">yahoo.com</option>
-										</select> <input class='btn2' type="button" value="이메일 중복확인" onclick="">
+										</select> <input class='btn2' id="emailCheck" type="button" value="이메일 중복확인" onclick="">
 										</td>
 									</tr>
 									<tr>
@@ -78,7 +80,7 @@
 									</tr>
 									<tr>
 										<td class="col1">생년월일</td>
-										<td class="col2"><input type="text" name="birthYear" id="birthYear"size="4" maxlength="4">년 
+										<td class="col2"><input type="text" name="memBirthYear" id="memBirthYear"size="4" maxlength="4">년 
 										<select name="birthMonth">
 												<option value="1">1
 												<option value="2">2
@@ -132,39 +134,39 @@
 									<tr>
 										<td class="col1">휴대폰번호</td>
 									<td class="col2">
-									<input type="text" name="hp1" id="hp1" size="3" maxlength="3">
-											- <input type="text" name="hp2" id="hp2" size="4" maxlength="4">
-											- <input type="text" name="hp3" id="hp3" size="4" maxlength="4">
+									<input type="text" name="memHp1" id="memHp1" size="3" maxlength="3">
+											- <input type="text" name="memHp2" id="memHp2" size="4" maxlength="4">
+											- <input type="text" name="memHp3" id="memHp3" size="4" maxlength="4">
 									</td>
 									<tr>
 									<td class="col1">주소 </td>
-									<td class="col2"><input type="text" name="zipcode" id="zipcode" readonly> 
+									<td class="col2"><input type="text" name="memZipcode" id="memZipcode" readonly> 
 									<input type="button" class="btn2" value="우편번호찾기"><br>
-									<input type="text" name="address1" id="address1" size="40"  readonly><br>
-									<input type="text" name="address2" id="address2" size="40" placeholder="상세 주소 입력">
+									<input type="text" name="memAddress1" id="memAddress1" size="40"  readonly><br>
+									<input type="text" name="memAddress2" id="memAddress2" size="40" placeholder="상세 주소 입력">
 									</td>
 								</tr>
 								</tr>
 									<tr>
 										<td class="col1">MBTI</td>
 										<td id="col2" align="center" >
-										<input type="radio" name="mbti" value="ISTJ" id="mbti1">ISTJ &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ISFJ" id="mbti2">ISFJ &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ESFJ" id="mbti3">ESFJ &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ESTJ" id="mbti4">ESTJ &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ISTJ" id="mbti5">ISFP &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ISFJ" id="mbti6">ISTP &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ESFJ" id="mbti7">ESFP &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ESTJ" id="mbti8">ESTP &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ISTJ" id="mbti1">ISTJ &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ISFJ" id="mbti2">ISFJ &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ESFJ" id="mbti3">ESFJ &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ESTJ" id="mbti4">ESTJ &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ISTJ" id="mbti5">ISFP &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ISFJ" id="mbti6">ISTP &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ESFJ" id="mbti7">ESFP &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ESTJ" id="mbti8">ESTP &nbsp;&nbsp;&nbsp;
 										<br> 
-										<input type="radio" name="mbti" value="ISTJ" id="mbti9">ENFP &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ISFJ" id="mbti10">INFJ &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ESFJ" id="mbti11">INFP &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ESTJ" id="mbti12">ENFJ &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ISTJ" id="mbti13">INTP &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ISFJ" id="mbti14">ENTJ &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ESFJ" id="mbti15">ENTP &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="mbti" value="ESTJ" id="mbti16">INTJ &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ISTJ" id="mbti9">ENFP &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ISFJ" id="mbti10">INFJ &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ESFJ" id="mbti11">INFP &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ESTJ" id="mbti12">ENFJ &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ISTJ" id="mbti13">INTP &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ISFJ" id="mbti14">ENTJ &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ESFJ" id="mbti15">ENTP &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="memMbti" value="ESTJ" id="mbti16">INTJ &nbsp;&nbsp;&nbsp;
 										</td>
 									</tr>
 									<tr>
@@ -386,7 +388,7 @@
 	적용 일자: 2021년 12월 24일
 	끼리끼리 서비스와 관련하여 궁금하신 사항이 있으시면 고객센터(대표번호: 1588 – 7272/ 평일 10:00~17:00)로 문의 주시기 바랍니다.
 										</div>
-										<label><input type="checkbox" id="agreement1" value="모든약관" > 모든 약관에 동의</label>
+										<label><input type="checkbox" id="memAgreement1" value="모든약관" > 모든 약관에 동의</label>
 										<br><br><br>
 										<div class="agreebox" style="overflow:scroll; width:600px; height:200px; background-color:white">					
 	개인정보보호법에 따라 끼리끼리에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간, 동의 거부권 및 동의 거부 시 불이익에 관한 사항을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.
@@ -451,7 +453,7 @@
 	이용자는 개인정보의 수집 및 이용 동의를 거부할 권리가 있습니다. 회원가입 시 수집하는 최소한의 개인정보, 즉, 필수 항목에 대한 수집 및 이용 동의를 거부하실 경우, 회원가입이 어려울 수 있습니다.
 										</div>
 										
-										<label><input type="checkbox" id="agreement2" value="개인정보"> 개인 정보 이용 동의</label>
+										<label><input type="checkbox" id="memAgreement2" value="개인정보"> 개인 정보 이용 동의</label>
 										<br>
 										<br>
 									</td>

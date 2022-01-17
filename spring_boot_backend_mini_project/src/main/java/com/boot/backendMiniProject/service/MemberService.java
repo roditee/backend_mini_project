@@ -19,4 +19,20 @@ public class MemberService implements IMemberService {
 	public MemberVO loginCheck(HashMap<String, Object> map) {
 		return dao.loginCheck(map);
 	}
+	
+	@Override
+	public String memIdCheck(String memId) {
+		return dao.memIdCheck(memId);
+	}
+	
+	@Override
+	public String memEmailCheck(String memEmail) {
+		return dao.memEmailCheck(memEmail);
+	}
+	
+	@Override
+	public void memJoin(MemberVO vo) {
+		dao.memJoin(vo);
+	}
+	
 }

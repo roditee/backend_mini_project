@@ -7,11 +7,13 @@ import org.springframework.context.annotation.ComponentScan;
 
 import com.boot.backendMiniProject.controller.MainController;
 import com.boot.backendMiniProject.controller.MemberController;
+import com.boot.backendMiniProject.controller.ProductController;
 import com.boot.backendMiniProject.dao.IMemberDAO;
 
 @SpringBootApplication
 @ComponentScan(basePackageClasses = MainController.class)
 @ComponentScan(basePackageClasses = MemberController.class)
+@ComponentScan(basePackageClasses = ProductController.class)
 @MapperScan(basePackageClasses = IMemberDAO.class)
 public class SpringBootBackendMiniProjectApplication {
 

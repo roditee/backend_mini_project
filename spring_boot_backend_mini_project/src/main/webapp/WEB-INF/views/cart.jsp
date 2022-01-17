@@ -36,7 +36,7 @@
 							    			<td>${ct.prdName }</td>
 							    			<td><fmt:formatNumber value="${ct.prdPrice }" pattern="#,###" /> ¿ø</td>
 							    			<td>
-							    				<input type="text" name="cartQty" value="${ct.cartQty}" size="1">
+							    				<input type="text" name="cartQty" value="${ct.cartQty}" size="1" readonly>
 							    				<input type="hidden" name="cartNo" value="${ct.cartNo}">
 							    				<input type="hidden" name="prdNo" value="${ct.prdNo}">
 							    				<input type="hidden" name="memId" value="${ct.memId}">

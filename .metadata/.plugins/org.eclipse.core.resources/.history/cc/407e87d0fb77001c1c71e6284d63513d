@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.boot.backendMiniProject.dao.IMemberDAO">
+  
+	  <!-- 로그인 -->
+		<select id="loginCheck" parameterType="hashmap" resultType="com.boot.backendMiniProject.model.MemberVO">
+			SELECT memId FROM member WHERE memId=#{id} and memPwd=#{pwd}
+		</select>
+		
+		<!-- ID 중복 확인 -->
+		<select id="memIdCheck" resultType="string" parameterType="string">
+			SELECT memId FROM member WHERE memId =#{memId}
+		</select>
+		
+		<!-- Email 중복 확인 -->
+		<select id="memEmailCheck" resultType="string" parameterType="string">
+			SELECT memEmail
+			FROM member
+			WHERE memEmail = "ynh@naver.com"
+		</select>
+		
+		<!-- 회원가입 --><!-- id pwd name email joindate mbti hp add12 -->
+		<insert id="memJoin" parameterType="com.boot.backendMiniProject.model.MemberVO">
+			INSERT INTO member(memId, memPwd, memName, memJoinDate, memMbti, memAddress1, memAddress2)
+			VALUES (#{memId}, #{memPwd}, #{memName}, default, #{memMbti}, #{memAddress1}, #{memAddress2})
+		</insert>
+  </mapper>

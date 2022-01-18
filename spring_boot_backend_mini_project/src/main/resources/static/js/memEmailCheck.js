@@ -5,11 +5,11 @@
  $(document).ready(function(){
 	$('#emailCheck').on('click', function(){		
 		event.preventDefault();
-		
+
 		$.ajax({
 			type:"post",
 			url:"memEmailCheck",
-			data:{"memEmail": $('#memEmail').val()},  
+			data:{"memEmailId": $('#memEmailId').val(), "memEmail": $('#memEmail').val()},  
 			dataType:'text',
 			success:function(result){
 				if(result == "no_use"){

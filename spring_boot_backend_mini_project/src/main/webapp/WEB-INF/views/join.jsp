@@ -13,6 +13,8 @@
 		<script src="<c:url value='/js/formCheck.js'/>"></script>
 		<script src="<c:url value='/js/memIdCheck.js'/>"></script>
 		<script src="<c:url value='/js/memEmailCheck.js'/>"></script>
+		<script src="<c:url value='/js/searchZip.js'/>"></script>
+		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 		<script src="https://kit.fontawesome.com/2d323a629b.js"crossorigin="anonymous"></script>
 	</head>
 	<body>
@@ -61,14 +63,15 @@
 									<tr>
 										<td class="col1">이메일</td>
 										<td class="col2"><input type="text" name="memEmailId" id="memEmailId">
-											<span class="a">@</span> <input type="text" name="memEmail" id="memEmail">
+											<span class="a">@</span> <input type="text" name="memEmailText" id="memEmailText">
 											<select id=selectEmail name="selectEmail">
 												<option value="self" selected>직접입력</option>
 												<option value="naver.com">naver.com</option>
 												<option value="gmail.com">gmail.com</option>
 												<option value="daum.com">daum.com</option>
 												<option value="yahoo.com">yahoo.com</option>
-										</select> <input class='btn2' id="emailCheck" type="button" value="이메일 중복확인" onclick="">
+										</select> <input class='btn2' id="emailCheck" type="button" value="이메일 중복확인">
+										<input type="text" name="memEmail" id="memEmail" />
 										</td>
 									</tr>
 									<tr>
@@ -137,11 +140,12 @@
 									<input type="text" name="memHp1" id="memHp1" size="3" maxlength="3">
 											- <input type="text" name="memHp2" id="memHp2" size="4" maxlength="4">
 											- <input type="text" name="memHp3" id="memHp3" size="4" maxlength="4">
+											<input type="text" name="memHp" id="memHp" />
 									</td>
 									<tr>
 									<td class="col1">주소 </td>
 									<td class="col2"><input type="text" name="memZipcode" id="memZipcode" readonly> 
-									<input type="button" class="btn2" value="우편번호찾기"><br>
+									<input type="button" class="btn2" id="searchZip" name="searchZip" value="우편번호찾기" readonly><br>
 									<input type="text" name="memAddress1" id="memAddress1" size="40"  readonly><br>
 									<input type="text" name="memAddress2" id="memAddress2" size="40" placeholder="상세 주소 입력">
 									</td>

@@ -56,11 +56,12 @@ public class MemberController {
 		return result;
 	}
 	
-	// 사용자 아이디 중복 확인
+	// 사용자 이메일 중복 확인
 	@ResponseBody
 	@RequestMapping("/memEmailCheck")
-	public String memEmailCheck(@RequestParam("memEmail") String memEmail) {
-		String memEmail_result = service.memEmailCheck(memEmail);
+	public String memEmailCheck(@RequestParam("memEmailId") String memEmailId, @RequestParam("memEmail") String memEmail) {
+		String email = memEmailId + '@' + memEmail;
+		String memEmail_result = service.memEmailCheck(email);
 		
 		String result = "use";
 		if(memEmail_result != null)
@@ -73,6 +74,7 @@ public class MemberController {
 	@RequestMapping("/memJoin")
 	public String memJoin(MemberVO vo) {
 		service.memJoin(vo);
+		
 		return "redirect:/";
 	}
 }

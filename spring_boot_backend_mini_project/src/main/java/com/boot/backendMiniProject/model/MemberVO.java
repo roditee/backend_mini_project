@@ -8,6 +8,7 @@ public class MemberVO {
 	private String memJoinDate;
 	private String memMbti;
 	private String memHp;
+	private String memZipcode;
 	private String memAddress1;
 	private String memAddress2;
 	
@@ -52,6 +53,12 @@ public class MemberVO {
 	}
 	public void setMemHp(String memHp) {
 		this.memHp = memHp;
+	}
+	public String getmemZipcode() {
+		return memZipcode;
+	}
+	public void setmemZipcode(String memZipcode) {
+		this.memZipcode = memZipcode;
 	}
 	public String getMemAddress1() {
 		return memAddress1;

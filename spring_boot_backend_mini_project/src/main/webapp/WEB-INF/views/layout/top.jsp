@@ -21,7 +21,10 @@
 			<script src="<c:url value='/js/zoomImage.js'/>"></script>
 	    <script src="<c:url value='/js/mainImg.js'/>"></script>
 	    <script src="<c:url value='/js/star.js'/>"></script> 
-			
+	    <script src="<c:url value='/js/modal.js'/>"></script> 
+	    <script src="<c:url value='/js/upload.js'/>"></script> 
+	    <script src="<c:url value='/js/moveScreen.js'/>"></script> 
+	    <script src="<c:url value='/js/selectBox.js'/>"></script> 
 	    <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
     </head>
 	<body>

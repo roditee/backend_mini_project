@@ -4,14 +4,45 @@
 
 window.onload = function() {
 	// 이메일 select
+	$('input[name=memEmailId]').change(function() {
+				var mailId = $(this).val();
+				var text = $('#memEmailText').val();
+				$('#memEmail').val(mailId + '@' + text);
+	});
+	
 	$('select[name=selectEmail]').change(function() {
 			if($(this).val()=="self"){
-				$('#memEmail').val("");
-				$("#memEmail").attr("readonly", false);
+				$('#memEmailText').val("");
+				$("#memEmailText").attr("readonly", false);
 			} else {
-				$('#memEmail').val($(this).val());
-				$("#memEmail").attr("readonly", true);
+				$('#memEmailText').val($(this).val());
+				$("#memEmailText").attr("readonly", true);
+				var mailId = $('#memEmailId').val();
+				var text = $(this).val();
+				$('#memEmail').val(mailId + '@' + text);
 			}
+	});
+	
+	// 핸드폰 번호
+	$('input[name=memHp1]').change(function() {
+				var memHp1 = $(this).val();
+				var memHp2 = $('#memHp2').val();
+				var memHp3 = $('#memHp3').val();
+				$('#memHp').val(memHp1 + '-' + memHp2 + '-' + memHp3);
+	});
+	
+	$('input[name=memHp2]').change(function() {
+				var memHp1 = $('#memHp1').val();
+				var memHp2 = $(this).val();
+				var memHp3 = $('#memHp3').val();
+				$('#memHp').val(memHp1 + '-' + memHp2 + '-' + memHp3);
+	});
+	
+	$('input[name=memHp3]').change(function() {
+				var memHp1 = $('#memHp1').val();
+				var memHp2 = $('#memHp2').val();
+				var memHp3 = $(this).val();
+				$('#memHp').val(memHp1 + '-' + memHp2 + '-' + memHp3);
 	});
 	
 	document.getElementById('joinForm').onsubmit = function() {

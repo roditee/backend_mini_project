@@ -26,8 +26,8 @@ public class MemberService implements IMemberService {
 	}
 	
 	@Override
-	public String memEmailCheck(String memEmail) {
-		return dao.memEmailCheck(memEmail);
+	public String memEmailCheck(String email) {
+		return dao.memEmailCheck(email);
 	}
 	
 	@Override

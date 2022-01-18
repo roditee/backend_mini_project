@@ -1,0 +1,5 @@
+package com.boot.backendMiniProject.service;
+
+public interface IBoardDAO {
+
+}

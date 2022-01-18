@@ -71,7 +71,7 @@
 												<option value="daum.com">daum.com</option>
 												<option value="yahoo.com">yahoo.com</option>
 										</select> <input class='btn2' id="emailCheck" type="button" value="이메일 중복확인">
-										<input type="text" name="memEmail" id="memEmail" />
+										<input type="hidden" name="memEmail" id="memEmail" />
 										</td>
 									</tr>
 									<tr>
@@ -140,7 +140,7 @@
 									<input type="text" name="memHp1" id="memHp1" size="3" maxlength="3">
 											- <input type="text" name="memHp2" id="memHp2" size="4" maxlength="4">
 											- <input type="text" name="memHp3" id="memHp3" size="4" maxlength="4">
-											<input type="text" name="memHp" id="memHp" />
+											<input type="hidden" name="memHp" id="memHp" />
 									</td>
 									<tr>
 									<td class="col1">주소 </td>

@@ -59,7 +59,7 @@
 
 #profileInfoGroup {
   float: left;
-  background: #f4f2f1;
+  background: #9b8373;
   width: 820px;
   margin-left: 65px;
   padding-left: 25px;
@@ -111,11 +111,12 @@
   line-height: 40px;
   padding: 0 15px;
   margin: 0 5px 7px 5px;
-  background: #ebc8b7;
+  background: #ebc14b;
+  border-style: none;
 }
 
 .myKeyword:hover {
-  background: #e7a788;
+  background: #c0633f;
 }
 
 /************* profileMusic ************/
@@ -141,10 +142,15 @@
   margin: 0 15px;
   border-radius: 50px;
   font-size: 20px;
-  background: #ebc8b7;
+  background: #ebc14b;
+  border-style: none;
 }
 
-/************* 찜 목록 ************/
+.musicBtn:hover {
+	background: #c0633f;
+}
+
+/************* 李� 紐⑸줉 ************/
 #wishGroup {
   margin: 0 115px 115px 115px;
   overflow: hidden;
@@ -175,7 +181,7 @@
   display: inline;
 }
 
-/************* 찜 목록 슬라이드 ************/
+/************* 李� 紐⑸줉 �뒳�씪�씠�뱶 ************/
 #wishBtnGroup {
   position: relative;
   z-index: 10;
@@ -206,7 +212,7 @@
   opacity: 0.8;
 }
 
-/************* 내 게시글 ************/
+/************* �궡 寃뚯떆湲� ************/
 #myPostGroup {
   padding: 0 115px 115px 115px;
 }

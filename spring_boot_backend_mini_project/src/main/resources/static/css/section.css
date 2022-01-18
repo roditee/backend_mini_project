@@ -5,7 +5,7 @@
   width: 100%;
   height: 300px;
   margin-top: 40px;
-  background: #f4f2f1;
+  background: #9b8373;
   height: 205px;
   padding: 23px 0;
 }
@@ -28,7 +28,7 @@
 }
 
 .mbtiCtgItems a {
-  color: rgb(0, 0, 0);
+  color: #e9e7e3;
   text-decoration: none;
   font-weight: bold;
 }
@@ -40,12 +40,13 @@
 /************* 인기 게시글 ************/
 #hotItemsSection {
   width: 100%;
-  background: #f4f2f1;
+  background: #9b8373;
   padding: 35px 0;
 }
 
 #hotItemsSection > h2 {
   padding: 0px 13px 13px 38px;
+  color: #e9e7e3;
 }
 
 .hotItemGroup {
@@ -66,17 +67,20 @@
 }
 
 /************* 추천게시글 ************/
-#KIRRIRecommendSection {
+#KIRRIRecommendSection, #KIRRIGoodsSection {
   width: 100%;
   height: 450px;
-  background: #f4f2f1;
+  background: #9b8373;
   padding: 35px 0;
+  margin-bottom: 90px;
+  padding-top: 75px;
 }
 
-#KIRRIRecommendSection h2 {
+#KIRRIRecommendSection h2, #KIRRIGoodsSection h2 {
   padding: 0px 13px 13px 38px;
+  color:#e9e7e3;
 }
-.KIRRIRecommendGroup {
+.KIRRIRecommendGroup, .KIRRIGoodsGroup {
   display: flex;
   justify-content: space-evenly;
 }

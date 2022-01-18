@@ -1,0 +1,5 @@
+package com.boot.backendMiniProject.dao;
+
+public interface ICartDAO {
+
+}

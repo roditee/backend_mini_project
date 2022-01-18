@@ -11,7 +11,7 @@
 	    <link href="<c:url value='/css/common.css'/>" rel="stylesheet" type="text/css">
 	    <link href="<c:url value='/css/menu.css'/>" rel="stylesheet" type="text/css">	
 	    <link href="<c:url value='/css/mainBanner.css'/>" rel="stylesheet" type="text/css">	
-	    <link href="<c:url value='/css/section.css'/>" rel="stylesheet" type="text/css">	
+	    <link href="<c:url value='/css/section.css'/>" rel="stylesheet" type="text/css">
 	    <link href="<c:url value='/css/productDetailView.css'/>" rel="stylesheet" type="text/css">
 			<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
 			<script src="<c:url value='/js/main.js'/>"></script>
@@ -20,11 +20,10 @@
 			<script src="<c:url value='/js/mainBanner.js'/>"></script>
 			<script src="<c:url value='/js/zoomImage.js'/>"></script>
 	    <script src="<c:url value='/js/mainImg.js'/>"></script>
-	    <script src="<c:url value='/js/star.js'/>"></script> 
 	    <script src="<c:url value='/js/modal.js'/>"></script> 
-	    <script src="<c:url value='/js/upload.js'/>"></script> 
 	    <script src="<c:url value='/js/moveScreen.js'/>"></script> 
-	    <script src="<c:url value='/js/selectBox.js'/>"></script> 
+	    <script src="<c:url value='/js/selectBox.js'/>"></script>
+	    <script src="<c:url value='/js/cart.js'/>"></script>
 	    <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
     </head>
 	<body>
@@ -75,8 +74,9 @@
                             <li class="subMenu"><a href="<c:url value='/mbtiInfo'/>">MBTI 유형별 특징</a></li>
                         </ul>
                     </li>
-                    <li class="menu link"><a href="#">KIRRI NEWS</a>
+                    <li class="menu link"><a href="#">KIRRI'S</a>
                         <ul class="hide">
+                        		<li class="subMenu"><a href="<c:url value='/'/>">KIRRI's 굿즈</a></li>
                             <li class="subMenu"><a href="<c:url value='/'/>">BrandStory</a></li>
                             <li class="subMenu"><a href="<c:url value='/'/>">주요 사업</a></li>
                             <li class="subMenu"><a href="<c:url value='/'/>">오시는 길</a></li>

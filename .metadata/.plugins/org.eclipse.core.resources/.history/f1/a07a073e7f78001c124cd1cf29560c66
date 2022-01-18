@@ -1,0 +1,12 @@
+package com.boot.backendMiniProject.model;
+
+public class ProductVO {
+	private String prdNo;
+	private String prdName;
+	private int prdPrice;
+	private String prdCompany;
+	private int prdStock;
+	private String prdDescript;
+	private String prdImg;
+	private String ctgId;
+}

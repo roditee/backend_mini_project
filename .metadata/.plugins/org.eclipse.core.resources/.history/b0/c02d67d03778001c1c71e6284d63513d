@@ -1,0 +1,61 @@
+package com.boot.backendMiniProject.service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.boot.backendMiniProject.dao.ICartDAO;
+import com.boot.backendMiniProject.model.CartVO;
+import com.boot.backendMiniProject.model.MemberVO;
+
+@Service
+public class CartService implements ICartService {
+	@Autowired
+	@Qualifier("ICartDAO")
+	ICartDAO dao;
+	
+	@Override
+	public void insertCart(CartVO vo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int checkPrdInCart(String prdNo, String memId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void updateQtyInCart(CartVO vo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public ArrayList<CartVO> cartList(String memId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateCart(CartVO vo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteCart(String cartNo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public MemberVO getMemberInfo(String memId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

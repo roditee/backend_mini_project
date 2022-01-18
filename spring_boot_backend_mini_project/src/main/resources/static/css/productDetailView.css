@@ -1,3 +1,6 @@
+#sec1 {
+	background : #bdb4af;
+}
 
 .productSection{
 	display:flex;
@@ -23,7 +26,7 @@
 
 .vl {
 	border-left: 1px solid gray;
-	height: 550px;
+	height: 580px;
 	margin-top: 80px;
 	margin-left: 30px;
 	}
@@ -35,7 +38,7 @@
 	
 }
 
-/* 네비게이션바 */
+/* �꽕鍮꾧쾶�씠�뀡諛� */
 #productNav{
 	width:84%;
 	height:50px; 
@@ -45,7 +48,7 @@
 	margin-left: 110px;
 	line-height:35px;
 	background-color:#e0d0c0;
-	z-index:20;  /* 스크롤 시 위 오도록 */
+	z-index:20;  /* �뒪�겕濡� �떆 �쐞 �삤�룄濡� */
 	border-top:solid #cccccc 1px;
 	border-bottom:solid #cccccc 1px;
 }
@@ -72,16 +75,22 @@
 }
 
 #thirdSection2{
-	width:32%; 
+	width:33%; 
 	height:400px; 
 	margin-left: 860px;
 }
 
+
 #blink{
+	position: absolute;
 	width:100%;
 	height: 300px;
-	margin-top:400px;
+	margin-top:80px;
 	display: inline-block;
+}
+
+#article4 {
+	height: 470px;
 }
 
 #fourthSection{
@@ -93,7 +102,7 @@
 	margin-left: 110px;
 }
 
-/* 상품정보 */
+/* �긽�뭹�젙蹂� */
 #real-input{
 	position: relative;
     left: 400px;
@@ -133,11 +142,11 @@
 	height:600px; 
 }
 
-/*네비게이션 상품선택 추가*/
+/*�꽕鍮꾧쾶�씠�뀡 �긽�뭹�꽑�깮 異붽�*/
 
 
 
-/* 리뷰 */
+/* 由щ럭 */
 .review_textarea::-webkit-scrollbar {
   width: 10px;
 }
@@ -151,7 +160,7 @@
   box-shadow: inset 0px 0px 5px white;
 }
 
-/* 제품사진 */
+/* �젣�뭹�궗吏� */
 #show-img{
 	width: 400px;
 	height: 400px;
@@ -221,7 +230,7 @@
 	margin-right: 0;
 	 }
 	
-/* 별점 */
+/* 蹂꾩젏 */
 .star {
     position: relative;
     font-size: 2rem;
@@ -246,78 +255,13 @@
   pointer-events: none;
 }
 
-/* 리뷰별점 */
-.rating .rate_radio + label {
-    position: relative;
-    display: inline-block;
-    margin-left: -4px;
-    z-index: 10;
-    width: 30px;
-    height: 30px;
-    background-image: url('/image/starrate.png');
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-    cursor: pointer;
-    background-color: #f0f0f0;
-}
-.rating .rate_radio:checked + label {
-    background-color: #ff8;
-}
-
-.reviewform textarea{
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.rating .rate_radio {
-    position: relative;
-    display: inline-block;
-    z-index: 20;
-    opacity: 0.001;
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-    cursor: pointer;
-    vertical-align: top;
-    display: none;
-}
-.rating .rate_radio + label {
-    position: relative;
-    display: inline-block;
-    margin-left: -4px;
-    z-index: 10;
-    width: 30px;
-    height: 30px;
-    background-image: url('/image/starrate.png');
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-    cursor: pointer;
-    background-color: #f0f0f0;
-}
-
-.rating .rate_radio:checked + label {
-    background-color: #ffff00;
-}
-
-.warning_msg {
-    display: none;
-    position: relative;
-    text-align: center;
-    background: #ffffff;
-    line-height: 26px;
-    width: 100%;
-    color: red;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #e0e0e0;
-}
 
 #orderBrand {
 	font-size: 23px;
 	justify-content: space-between;
 }
 
-/*상품옵션박스*/
+/*�긽�뭹�샃�뀡諛뺤뒪*/
 #firstSectionBox{
 	text-align: center;
 	height: 120px;
@@ -371,7 +315,7 @@
 	
 }
 
-/* 주문버튼 */
+/* 二쇰Ц踰꾪듉 */
 .myButton1 {
 	box-shadow:inset 0px 0px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
@@ -436,7 +380,7 @@
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:13px 74px;
+	padding:13px 70px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
 	
@@ -462,7 +406,7 @@
 	font-family:Arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:13px 74px;
+	padding:13px 70px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
 	
@@ -476,7 +420,7 @@
 	top:1px;
 }
 
-/* 쿠폰창 */
+/* 荑좏룿李� */
 .modal-container{
   width:80%;
   margin-left:268px;
@@ -567,5 +511,18 @@
   border-right:1px solid #3b5fbf;
 }
 
-        
-        
+/* 二쇰Ц�닔�웾 �솗�씤 */
+
+.productBox{
+	width:400px;
+	height:200px;
+}
+
+#orderTable{
+	width:500px;
+	height: 250px;
+}
+
+#footer {
+	margin:0;
+}

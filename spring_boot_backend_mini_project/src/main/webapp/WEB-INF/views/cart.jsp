@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="EUC-KR">
+		<meta charset="UTF-8">
 		<title>장바구니</title>
 		<link href="<c:url value='/css/cart.css'/>" rel="stylesheet" type="text/css">	
 		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>

@@ -11,13 +11,3 @@
   });
 });
  */
-
-$(document).ready(function() {
-	var i=1;
-  $('#prdSelect2').change(function() {
-    var result = $('#prdSelect2 option:selected').val();
-    if (result == '회색') {
-      $('#thirdSection2').append("<div class='original'>등장"+i+"</div>");
-    }
-  }); 
-}); 

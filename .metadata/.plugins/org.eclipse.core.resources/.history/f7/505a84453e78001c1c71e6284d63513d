@@ -1,0 +1,17 @@
+body {
+	height:100vh;
+	background:radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+	overflow: hidden;
+}
+
+.snow {
+	width:20px;
+	height:20px;
+	background:#fff;
+	border-radius:50%;
+}
+
+@keyframes snow {
+	0% { opacity:0; }
+	100% { opacity:1; }
+}

@@ -1,19 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>상품 상세 페이지</title>
 	</head>
-	<body>
+	<body onload="init();">
 		<div id="wrap">
 			<!-- TOP -->
 			<jsp:include page="/WEB-INF/views/layout/top.jsp" flush='true'/>
 			
 			<!-- section1 -->
-			<section>
+			<section id="sec1">
 				<article class="productSection">
 					<div id="firstSection1">
 						 <div class="show">
@@ -54,7 +55,7 @@
 									    <div class="popup">
 									      <div class="popup-head">
 									          <span class="head-title">
-									            MuziMuzi</span>
+									           KIRRIKKIRI 쿠폰함</span>
 									      </div>
 									      <div class="popup-body">
 									        <div class="body-content">
@@ -72,24 +73,24 @@
 									    </div>
 									</div>
 									</div>	
-							<p><span id="span1">&nbsp;
+							<span id="span1">&nbsp;
 								<span id="userName"><!-- 로그인 한 경우  -->   
 			                       <c:if test="${not empty sessionScope.sid}">
 			                          <a href="<c:url value='/myFeed'/>">${sessionScope.sid}'</a>
 			                       </c:if>&nbsp;</span>
 								님이 적용가능한 쿠폰
-							</span></p><br><hr><br>
+							</span><hr>
 						<p style="font-size: 16px; font-weight: bold;">&nbsp;KIRRI 제품 배송기간</p> 
-						<p>&nbsp;└ 이 상품의 평균 배송기간:2일(주말/공휴일 제외)</p><br><hr><br>
+						<p>&nbsp;└ 이 상품의 평균 배송기간:2일(주말/공휴일 제외)</p><hr>
 						<p><span id="span1">&nbsp;KIRRI</span><span id="span2">브랜드홈</span></p><br>
 						<div id="firstSectionBox">
 							<select id="prdSelect" name="items1">
 								<option value="회색">회색</option>
 								<option value="노란색">노란색</option>
 								<option value="흰색">흰색</option>
-							</select><br><br><hr>
+							</select><br><hr>
 						</div>
-						<a href="#" class="myButton1" id="cart">장바구니</a>
+						<a href="/cart" class="myButton1" id="cart">장바구니</a>
 						<a href="#" class="myButton2" id="order">주문하기</a>
 					 </div>
 				</article>
@@ -109,50 +110,53 @@
 						<img id="prdbanner"src="image/clothes/prdbanner2.jpg">
 					</div>
 					<aside id="thirdSection2">
-						<select id="prdSelect2" name="items1">
-							<option value="회색">회색</option>
-							<option value="노란색">노란색</option>
-							<option value="흰색">흰색</option>
-						</select>
+						<div class="productBox">
+							<form name = "form" >
+								<table id="orderTable" border="1" width="350"  bgcolor="#fffee9" align="center" cellspacing="0" cellpadding="3" 
+								 bordercolor="#000000" bordercolordark="#ffffff" bordercolorlight="#fddc78">
+								    <tr>
+								    	<td align="left" width="150" bgcolor="#fffecc">
+								    	<font color="#0000ff">*</font> 상품선택 :</td>
+								    	<td width="300">
+									    	<select name="selectbank" onchange="bankDisplay(this.form)" >
+										    	<option selected value=0>-선택하세요-
+										    	<option value=1>회색
+										    	<option value=2>노란색
+										    	<option value=3>흰색
+									    	</select>
+								    	</td>
+								    </tr>
+								    <tr>
+								    	<td>수량 :</td>
+								    	<td><input type=hidden name="sell_price" value="40000">
+											<input type="text" name="amount" value="1" size="3" onchange="change();">
+											<input type="button" value=" + " onclick="add();"><input type="button" value=" - " onclick="del();">
+										</td>
+									</tr>
+									<tr>
+										<td>금액: </td>	
+										<td><input type="text" name="sum" size="11" readonly>원</td>
+								    </tr>
+								    <tr>
+								    	<td align="left" width="80" bgcolor="#fffecc">
+								    	<font color="#0000ff">*</font> 상품명 :</td>
+								    	<td width="400">
+								    		<input name="bank" type="text" size="50" maxlength="30">
+							    		</td>
+								    </tr>
+								</table>
+							</form>
+						</div>
 						<div id="blink">
-							<a href="#" class="myButton3" id="cart">장바구니</a>
+							<a href="/cart" class="myButton3" id="cart">장바구니</a>
 							<a href="#" class="myButton4" id="order">바로구매</a>
 						</div>
 					</aside>
 				</article>
-				<article>
+				<article id="article4">
 					<div id="fourthSection">
-						<h1>후기</h1>
-					    <form name="reviewform" class="reviewform" method="post" action="/save">
-					        <input type="hidden" name="rate" id="rate" value="0"/>
-					        <p class="title_star">별점과 포토리뷰를 남겨주세요.</p>
-					 
-					        <div class="review_rating">
-					            <div class="warning_msg">별점을 선택해 주세요.</div>
-					            <div class="rating">
-					                <!-- 해당 별점을 클릭하면 해당 별과 그 왼쪽의 모든 별의 체크박스에 checked 적용 -->
-					                <input type="checkbox" name="rating" id="rating1" value="1" class="rate_radio" title="1점">
-					                <label for="rating1"></label>
-					                <input type="checkbox" name="rating" id="rating2" value="2" class="rate_radio" title="2점">
-					                <label for="rating2"></label>
-					                <input type="checkbox" name="rating" id="rating3" value="3" class="rate_radio" title="3점" >
-					                <label for="rating3"></label>
-					                <input type="checkbox" name="rating" id="rating4" value="4" class="rate_radio" title="4점">
-					                <label for="rating4"></label>
-					                <input type="checkbox" name="rating" id="rating5" value="5" class="rate_radio" title="5점">
-					                <label for="rating5"></label>
-					            </div>
-							</div>
-					        <div class="review_contents">
-				            	<div class="warning_msg">5자 이상으로 작성해 주세요.</div>
-					            <textarea rows="10" class="review_textarea" id="review_textarea"></textarea>
-					        </div>   
-					        <div class="cmd">
-					            <input type="file" id="real-input" class="image_inputType_file" accept="/image/*" required multiple>
-					            <input type="submit" class="browse-btn" name="save" id="save" value="등록">
-				        	</div>
-					    </form>
-					</div>	
+						<jsp:include page="/WEB-INF/views/review/list.jsp" flush='true'/>
+					</div>
 				</article>
 			</section>
 

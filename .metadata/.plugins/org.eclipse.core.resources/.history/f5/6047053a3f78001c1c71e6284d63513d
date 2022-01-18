@@ -1,0 +1,14 @@
+/**
+ * snow.js
+ */
+ 
+ function createSnow() {
+	const el = document.createElement("div");
+	el.classList.add('snow');
+	el.style.marginLeft = Math.floor(Math.random() * window.innerWidth) + 'px';
+	document.body.appendChild(el);
+}
+
+function randomPosition() {
+	return Math.floor(Math.random() * window.innerWidth);
+}

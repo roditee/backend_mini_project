@@ -37,8 +37,8 @@ public class MemberService implements IMemberService {
 	}
 	
 	@Override
-	public MemberVO profileInfo(String memId) {
-		return dao.profileInfo(memId);
+	public ArrayList<MemberVO> listAllProfile() {
+		return dao.listAllProfile();
 	}
 	
 	@Override
@@ -47,7 +47,7 @@ public class MemberService implements IMemberService {
 	}
 	
 	@Override
-	public ArrayList<MemberVO> listAllProfile() {
-		return dao.listAllProfile();
+	public MemberVO profileInfo(String memId) {
+		return dao.profileInfo(memId);
 	}
 }

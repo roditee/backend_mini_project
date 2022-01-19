@@ -1,0 +1,9 @@
+package com.boot.backendMiniProject.dao;
+
+import java.util.ArrayList;
+
+import com.boot.backendMiniProject.model.PostVO;
+
+public interface IPostDAO {
+	ArrayList<PostVO> listOfPost();
+}

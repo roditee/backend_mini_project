@@ -3,7 +3,6 @@ nav {
   /* overflow: hidden; */
   position: relative;
   transform: translateX(-170px);
-  height: 100%;
   width: 270px;
   transition: all 800ms cubic-bezier(0.8, 0, 0.33, 1);
   border-radius: 0% 0% 100% 50%;

@@ -104,6 +104,10 @@ body {
   outline: none;
 }
 
+#searchBtn {
+	visibility: hidden;
+}
+
 #SearchBar i:hover {
   opacity: 0.5;
 }

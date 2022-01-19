@@ -1,0 +1,9 @@
+package com.boot.backendMiniProject.model;
+
+public class PostVO {
+	private int postNo;
+	private String memId;
+	private String posTitle;
+	private String postImg;
+    private String postConten;
+}

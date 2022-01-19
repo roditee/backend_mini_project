@@ -36,7 +36,7 @@
 	                                </div>
 	                            </div>
 	                            <div id="profileKeyword">
-	                                    <button id="EditKeywordBtn">This is my Keyword</button>
+	                                    <a href="<c:url value='/updateProfileForm/${mem.memId }'/>">프로필 수정</a>
 	                                <div id="myKeywordGroup">
 	                                    <button class="myKeyword">사교적</button>
 	                                    <button class="myKeyword">활동적</button>

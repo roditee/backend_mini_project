@@ -1,0 +1,45 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>게시글 상세 페이지</title>
+	</head>
+	<body>
+		<div id="wrap"> 
+		
+			<!-- TOP  -->
+	   	<jsp:include page="/WEB-INF/views/layout/top.jsp" flush='true' />
+	   
+			<section>
+				<h3>상품 상세 정보 조회</h3>
+				<table border="1" width="800">
+					<tr><td rowspan="9"><img src="<c:url value="/image/${post.prdImg}"/>" width="300" height="250"></td></tr>
+					<tr><td>게시글번호</td><td><input type="hidden" name="postNo" value="${post.postNo }"> ${post.postNo }</td></tr>
+					<tr><td>작성자</td><td>${post.postNo }</td></tr>
+					<tr><td>작성자</td><td>${post.postNo }</td></tr>
+					<tr><td>작성자</td><td>${post.postNo }</td></tr>
+					<tr><td>작성자</td><td>${post.postNo }</td></tr>
+				  <tr><td colspan="2">
+				  			
+				  			<!-- 로그인한 경우에는 [찜하기] [공유하기] 버튼 출력  -->
+				  			<c:if test="${not empty sessionScope.sid }">
+				  				<input type="submit" id="addHeartBtn" value="찜하기">
+				  				<input type="button" id="shareBtn" value="공유하기">
+				  			</c:if>
+				  
+				  		</td></tr>       
+				</table>					
+				
+				<%-- <a href="<c:url value='/product/listCtgProduct/${prd.ctgId}'/>"><button>상품 목록</button></a>	 --%>
+			</section>
+			
+			<!-- BOTTOM  -->
+		   <jsp:include page="/WEB-INF/views/layout/bottom.jsp" flush='true' />
+		   
+	      </div>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+package com.boot.backendMiniProject.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.boot.backendMiniProject.model.PostVO;
+
+public interface IPostService {
+	ArrayList<PostVO> listMbtiPost(String memMbti); // mbti별 게시글 목록 조회
+}

@@ -1,0 +1,40 @@
+package com.boot.backendMiniProject.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.boot.backendMiniProject.model.PostVO;
+import com.boot.backendMiniProject.service.PostService;
+
+@Controller
+public class PostController {
+	@Autowired
+	PostService service;
+	
+	// 카테고리별 상품 조회
+	@RequestMapping("/postListView/{memMbtiCode}")
+	public String listMbtiPost(@PathVariable String memMbtiCode, Model model){
+		ArrayList<PostVO> postList = service.listMbtiPost(memMbtiCode);
+		model.addAttribute("postList", postList);
+		
+		return "postListView";
+	}
+	
+	// 상품 상세 정보 페이지로 이동
+	@RequestMapping("/postDetailView/{postNo}")
+	public String postDetailView(@PathVariable String postNo, Model model) {
+		System.out.println(postNo); // 상품번호가 제대로 전달되었는지 확인
+
+		PostVO post = service.postDetailView(postNo);
+		model.addAttribute("post", post);
+		
+		System.out.println(post.getPostNo()); //Mapper에서 상품을 검색해서 반환했는지 확인
+		
+		return "postDetailView";
+	}
+}

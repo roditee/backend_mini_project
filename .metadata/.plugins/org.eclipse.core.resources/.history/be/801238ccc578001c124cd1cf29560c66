@@ -1,0 +1,25 @@
+package com.boot.backendMiniProject.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.boot.backendMiniProject.model.PostVO;
+import com.boot.backendMiniProject.service.PostService;
+
+@Controller
+public class PostController {
+	@Autowired
+	PostService service;
+	
+	@RequestMapping("/listOfPost/{searchBarInput}")
+	public String listOfPost(@PathVariable String searchBarInput, Model model) {
+		ArrayList<PostVO> postList = service.listOfPost(searchBarInput);
+		model.addAttribute("postList", postList);
+		return "";
+	}
+}

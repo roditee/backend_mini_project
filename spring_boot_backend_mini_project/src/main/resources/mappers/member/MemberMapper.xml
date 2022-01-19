@@ -25,4 +25,16 @@
 			INSERT INTO member(memId, memPwd, memName, memEmail, memJoinDate, memMbti, memHp, memZipcode, memAddress1, memAddress2)
 			VALUES (#{memId}, #{memPwd}, #{memName}, #{memEmail}, default, #{memMbti}, #{memHp}, #{memZipcode}, #{memAddress1}, #{memAddress2})
 		</insert>
+		
+		<!-- 상품 상세 정보 조회  -->
+ 		<select id="profileInfo" parameterType="string" resultType="com.boot.backendMiniProject.model.MemberVO">
+ 			SELECT * FROM member WHERE memId=#{memId}  		
+ 		</select>
+ 		
+ 		<!-- 상품 정보 수정 : 수정된 정보 DB에 저장 (상품번호는 수정 안 함 : 기본키 변경 안 함) -->
+		<update id="updateProfile" parameterType="com.boot.backendMiniProject.model.MemberVO">
+ 			UPDATE member
+ 			SET memId=#{memId}, memPwd=#{memPwd}, memName=#{memName}, memMbti=#{memMbti}, memHp=#{memHp},, memAddress1=#{memAddress1},, memAddress2=#{memAddress2} 
+ 			WHERE memId=#{memId}
+ 		</update>
   </mapper>

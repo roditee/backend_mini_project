@@ -1,0 +1,11 @@
+package com.boot.backendMiniProject.dao;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.boot.backendMiniProject.model.PostVO;
+
+public interface IPostDAO {
+	ArrayList<PostVO> listMbtiPost(String memMbti); // mbti별 게시글 목록 조회
+	PostVO postDetailView(String prdNo); // 상세 게시글 조회
+}

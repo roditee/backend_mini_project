@@ -1,0 +1,44 @@
+package com.boot.backendMiniProject.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+
+import com.boot.backendMiniProject.dao.IPostDAO;
+import com.boot.backendMiniProject.model.PostVO;
+
+@Service
+public class PostService implements IPostService {
+	@Autowired
+	@Qualifier("IPostDAO")
+	IPostDAO dao;
+
+	@Override
+	public void insertPost(PostVO postVo) {
+
+	}
+
+	@Override
+	public void updatePost(PostVO postVo) {
+
+	}
+
+	@Override
+	public void deletePost(String postNo) {
+
+	}
+
+	@Override
+	public PostVO detailViewPost(String postNo) {
+		return dao.detailViewPost(postNo);
+	}
+
+	@Override
+	public ArrayList<PostVO> postSearch(HashMap<String, Object> map) {
+		return dao.postSearch(map);
+	}
+
+}

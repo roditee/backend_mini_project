@@ -1,5 +1,6 @@
 package com.boot.backendMiniProject.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,4 +36,18 @@ public class MemberService implements IMemberService {
 		dao.memJoin(vo);
 	}
 	
+	@Override
+	public MemberVO profileInfo(String memId) {
+		return dao.profileInfo(memId);
+	}
+	
+	@Override
+	public void updateProfile(MemberVO memVo) {
+		dao.updateProfile(memVo);
+	}
+	
+	@Override
+	public ArrayList<MemberVO> listAllProfile() {
+		return dao.listAllProfile();
+	}
 }

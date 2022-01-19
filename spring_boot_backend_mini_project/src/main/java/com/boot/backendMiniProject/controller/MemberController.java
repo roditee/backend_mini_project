@@ -1,5 +1,6 @@
 package com.boot.backendMiniProject.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpSession;
@@ -76,5 +77,30 @@ public class MemberController {
 		service.memJoin(vo);
 		
 		return "redirect:/";
+	}
+	
+	// 전체 정보 조회
+	@RequestMapping("/listAllProfile")
+	public String listAllProfile() { //Model model
+//		ArrayList<MemberVO> infoList = service.listAllProfile();
+//		model.addAttribute("infoList", infoList);		
+		return "profileListView";
+	}
+	
+	// 프로필 수정 폼으로 이동
+	@RequestMapping("/updateProfileForm")///{memId}
+	public String updateProfileForm() {
+		// @PathVariable String memId, Model model
+//		// 상품번호 전달하고, 해당 상품 정보 받아오기 
+//		MemberVO mem = service.profileInfo(memId); // 상세 상품 조회 메소드 그대로 사용
+//		model.addAttribute("mem", mem);
+		return "updateProfileForm";
+	}
+	
+	// 상품 정보 수정 : 수정된 상품 정보 DB에 저장
+	@RequestMapping("/updateProfile")
+	public String updateProfile() { //MemberVO mem
+//		service.updateProfile(mem);		
+		return "redirect:./listAllProfile";
 	}
 }

@@ -267,6 +267,10 @@ select {
   height: 30px;
 }
 
+.keyBtn {
+	visibility:hidden;
+}
+
 #footer {
   padding: 35px 150px;
 }

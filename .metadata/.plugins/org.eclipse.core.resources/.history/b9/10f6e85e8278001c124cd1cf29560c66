@@ -1,0 +1,14 @@
+package com.boot.backendMiniProject.dao;
+
+import java.util.ArrayList;
+
+import com.boot.backendMiniProject.model.PostVO;
+
+public interface IPostDAO {
+	ArrayList<PostVO> listOfPost();
+	void insertPost(PostVO postVo);
+	void updatePost(PostVO postVo);
+	void deletePost(String postNo);
+	PostVO detailViewPost(String postNo);
+	ArrayList<PostVO> productSearch(HashMap<String, Object> map);
+}

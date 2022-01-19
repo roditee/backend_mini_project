@@ -1,0 +1,31 @@
+package com.boot.backendMiniProject.controller;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.boot.backendMiniProject.model.PostVO;
+import com.boot.backendMiniProject.service.PostService;
+
+@Controller
+public class PostController {
+	@Autowired
+	PostService service;
+	
+	@RequestMapping("/searchPost")
+	public ArrayList<PostVO> searchPost(@RequestParam HashMap<String, Object> param, Model model) {
+		ArrayList<PostVO> postList = service.searchPost(searchBarInput);
+		model.addAttribute("postList", postList);
+		return postList;
+	}
+	
+	@RequestMapping("/postListView")
+	public String listOfPost() {
+		return "postListView";
+	}
+}

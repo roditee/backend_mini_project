@@ -1,0 +1,46 @@
+package com.boot.backendMiniProject.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.boot.backendMiniProject.model.PostVO;
+
+public class PostService implements IPostService {
+
+	@Override
+	public ArrayList<PostVO> listOfPost() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insertPost(PostVO postVo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updatePost(PostVO postVo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deletePost(String postNo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public PostVO detailViewPost(String postNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<PostVO> postSearch(HashMap<String, Object> map) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

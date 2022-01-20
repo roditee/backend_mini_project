@@ -1,0 +1,21 @@
+
+#postBox {
+	text-align: center;
+}
+
+#postTable {
+    margin: 40px auto 0 auto;
+}
+
+tr {
+	height: 60px;
+}
+
+#picTh {
+	width: 600px;
+    height: 600px;
+}
+
+th {
+	width:15%;
+}

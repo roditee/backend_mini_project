@@ -1,0 +1,59 @@
+package com.boot.backendMiniProject.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.SelectKey;
+import org.apache.ibatis.annotations.Update;
+
+import com.boot.backendMiniProject.model.BoardVO;
+
+public interface BoardMapper {
+	
+	@Select("SELECT boardnumber,name,subject,pwd,content,hit,regdate FROM project1_board")
+	public List<BoardVO> boardListData(Map map);
+	
+	// 寃뚯떆�뙋1 �럹�씠吏��떦 8媛쒕줈 �옒�옄�쓣 �븣 珥앺럹�씠吏� �닔
+	@Select("SELECT CEIL(COUNT(*)/8.0) FROM project1_board")
+	public int boardTotalPage();
+	
+	// 寃뚯떆�뙋1 湲�踰덊샇 �옄�룞利앷�, 湲��벐湲� �뜲�씠�꽣異붽�
+	@SelectKey(keyProperty="boardnumber",resultType=int.class,before=true,
+			statement="SELECT NVL(MAX(boardnumber)+1,1) as boardnumber FROM project1_board")
+	@Insert("INSERT INTO project1_board(boardnumber,name,subject,pwd,content) "
+			+"VALUES(#{boardnumber},#{name},#{subject},#{pwd},#{content})")
+	public void boardInsert(BoardVO vo);
+	
+	// 寃뚯떆�뙋1 議고쉶�닔利앷�
+	@Update("UPDATE project1_board SET "
+			+"hit=hit+1 "
+			+"WHERE boardnumber=#{boardnumber}")
+	public void boardHitIncrement(int boardnumber);
+	
+	// 寃뚯떆�뙋1 �긽�꽭蹂닿린
+	@Select("SELECT * FROM project1_board WHERE boardnumber=#{boardnumber}")
+	public BoardVO boardDetailData(int boardnumber);
+	
+	// 寃뚯떆�뙋1 �닔�젙
+	@Update("UPDATE project1_board SET content=#{content}, subject=#{subject} WHERE boardnumber=#{boardnumber} AND pwd=#{pwd}")
+	public void boardUpdate(Map map);
+	
+	// 寃뚯떆�뙋1 �궘�젣 
+	@Delete("DELETE FROM project1_board "
+			+"WHERE boardnumber=#{boardnumber}")
+	public void boardDelete(int boardnumber);
+	
+	// 寃��깋 
+	@Select("SELECT boardnumber, name, subject, pwd, content, hit, regdate "
+			+ "FROM project1_board "
+			+ "WHERE subject LIKE '%${search_keyword}%' OR content LIKE '%${search_keyword}%' AND boardnumber BETWEEN #{start} AND #{end} ORDER BY boardnumber ")
+	public List<BoardVO> boardList_search(Map map);
+	
+	// 寃��깋 珥� �럹�씠吏� 異쒕젰
+	@Select("SELECT CEIL(COUNT(*) / 10.0) FROM project1_board WHERE #{finding} LIKE '%#{voca}%' AND root = 0")
+	public int searchTotalPage(); 
+	
+}

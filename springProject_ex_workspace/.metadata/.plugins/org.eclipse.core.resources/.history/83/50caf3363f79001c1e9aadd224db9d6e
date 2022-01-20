@@ -1,0 +1,23 @@
+table {
+	margin: 25px auto;
+    width: 1400px;
+    border-style: none;
+    text-align: center;
+}
+
+#titleRow {
+	height: 75px;
+    font-size: 23px;
+    border-radius: 132px;
+    border-style: none;
+    background: #8d5949;
+}
+
+#secondRow {
+	height: 50px;
+	padding: 23px 0;
+}
+
+.rows {
+	height: 40px;
+}

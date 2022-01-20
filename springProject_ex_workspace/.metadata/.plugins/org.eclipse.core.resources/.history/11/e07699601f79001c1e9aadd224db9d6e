@@ -1,0 +1,154 @@
+package com.boot.backendMiniProject.post;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class PostController {
+	@RequestMapping("/productDetailView")
+	public String productDetailView() {
+		return "/productDetailView";
+	}
+	
+	// DI ?„¤? •
+		@Autowired
+		PostService service;	
+		
+//		// ?‹¤?–‰ ?‹œ index ?˜?´ì§? ?—´ê¸?
+//		@RequestMapping("/")
+//		public String viewIndex() {
+//			return "index";
+//		}
+		
+		// ? „ì²? ?ƒ?’ˆ ì¡°íšŒ
+		@RequestMapping("/product/listAllProduct")
+		public String listAllProduct(Model model) {
+			ArrayList<PostVO> prdList = service.listAllProduct();
+			model.addAttribute("prdList", prdList);		
+			return "product/productListView";
+		}
+		
+		// ?ƒ?’ˆ ?“±ë¡í¼?œ¼ë¡? ?´?™
+		@RequestMapping("/product/newProductForm")
+		public String newProductForm() {
+			return "product/newProductForm";
+		}
+		
+		// ?ƒ?’ˆ ?“±ë¡?
+		@RequestMapping("/product/insertProduct")
+		public String insertProduct(PostVO prd) {
+			//System.out.println(prd.getPrdNo());
+			service.insertProduct(prd);
+			return "redirect:./listAllProduct";
+			//return "redirect:/product/listAllProduct"; // ?´? ‡ê²? ?•´?„ ?¨
+			//return "product/productListView"; // ?´? ‡ê²? ?•˜ë©? ?°?´?„° ì¶œë ¥ ?•ˆ ?¨
+		}
+		
+		// ?ƒ?’ˆ ?ƒ? œ ? •ë³? ?˜?´ì§?ë¡? ?´?™
+		@RequestMapping("/product/detailViewProduct/{prdNo}")
+		public String detailViewProduct(@PathVariable String prdNo, Model model) {
+			// ?ƒ?’ˆë²ˆí˜¸ ? „?‹¬?•˜ê³?, ?•´?‹¹ ?ƒ?’ˆ ? •ë³? ë°›ì•„?˜¤ê¸? 
+			PostVO prd = service.detailViewProduct(prdNo);
+			model.addAttribute("prd", prd);
+			
+			//System.out.println(prd.getPrdNo()); // ?„œë¹„ë¡œë¶??„° ë°˜í™˜?œ ê°? ?™•?¸
+			
+			return "product/productDetailView";  // ?ƒ?’ˆ ?ƒ?„¸ ? •ë³? ë·? ?˜?´ì§?
+		}
+		
+		// ?ƒ?’ˆ ? •ë³? ?ˆ˜? • ?™”ë©´ìœ¼ë¡? ?´?™ (?ˆ˜? •?•˜ê¸? ?œ„?•´ ë¨¼ì? ?ƒ?’ˆ ?ƒ?„¸ ? •ë³´ë?? ?™”ë©?(?…? ¥ ?¼)?— ì¶œë ¥)
+		@RequestMapping("/product/updateProductForm/{prdNo}")
+		public String updateProductForm(@PathVariable String prdNo, Model model) {
+			// ?ƒ?’ˆë²ˆí˜¸ ? „?‹¬?•˜ê³?, ?•´?‹¹ ?ƒ?’ˆ ? •ë³? ë°›ì•„?˜¤ê¸? 
+			PostVO prd = service.detailViewProduct(prdNo); // ?ƒ?„¸ ?ƒ?’ˆ ì¡°íšŒ ë©”ì†Œ?“œ ê·¸ë?ë¡? ?‚¬?š©
+			model.addAttribute("prd", prd);
+			return "product/updateProductForm";
+		}
+		
+		// ?ƒ?’ˆ ? •ë³? ?ˆ˜? • : ?ˆ˜? •?œ ?ƒ?’ˆ ? •ë³? DB?— ???¥
+		@RequestMapping("/product/updateProduct")
+		public String detailViewProduct(PostVO prd) {
+			service.updateProduct(prd);		
+			return "redirect:./listAllProduct";  // ? „ì²? ?ƒ?’ˆ ì¡°íšŒ ?˜?´ì§?ë¡? ?¬?›Œ?”©
+		}
+		
+		// ?ƒ?’ˆ ? •ë³? ?‚­? œ
+		@RequestMapping("/product/deleteProduct/{prdNo}")
+		public String deleteProduct(@PathVariable String prdNo) {
+			//System.out.println(prdNo); // ?ƒ?’ˆë²ˆí˜¸ ? „?‹¬?˜?Š”ì§? ?™•?¸
+			service.deleteProduct(prdNo);
+			return "redirect:../listAllProduct";  // ? „ì²? ?ƒ?’ˆ ì¡°íšŒ ?˜?´ì§?ë¡? ?¬?›Œ?”©
+			//return "redirect:/product/listAllProduct"; // ?´? ‡ê²? ?•´?„ ?˜¤ë¥? ?—†?Œ
+		}
+		
+		//?•„?´?”” ì¤‘ë³µ ?™•?¸
+		@ResponseBody
+		@RequestMapping("product/prdNoCheck")
+		public String prdNoCheck(@RequestParam("prdNo") String prdNo) {
+			// ?„œë¹„ìŠ¤ ?˜¸ì¶? -> DAO -> Mapper -> prdNoê°? ì¡´ì¬?•˜ë©? prdNo ë°˜í™˜
+			String prdNo_result = service.prdNoCheck(prdNo);
+			
+			String result = "use";
+			if(prdNo_result != null) // prdNo_resultê°? ë°›ì? ê°’ì´ ?ˆ?œ¼ë©? (?„?´ ?•„?‹ˆë©?)
+				result = "no_use";
+			
+			return result;
+		}
+		
+		// ?ƒ?’ˆ ê²??ƒ‰ ?¼?œ¼ë¡? ?´?™
+		@RequestMapping("/product/productSearchForm")
+		public String productSearchForm() {
+			return "product/productSearchForm";
+		}
+		
+		// ?ƒ?’ˆ ê²??ƒ‰ 
+		@ResponseBody
+		@RequestMapping("/product/productSearch")
+//		public ArrayList<ProductVO> productSearch(@RequestParam("type") String type, 
+//												@RequestParam("keyword") String keyword) {
+		public ArrayList<PostVO> productSearch(@RequestParam HashMap<String, Object> param, 
+																					Model model){
+			System.out.println("a");
+			ArrayList<PostVO> prdList = service.productSearch(param);
+			model.addAttribute("prdList", prdList);
+			
+			// prdListë¡? ? œ??ë¡? ë°˜í™”?˜?—ˆ?Š”ì§? ?™•?¸?•˜ê¸? ?œ„?•œ ì½”ë“œ
+//			for(int i =0; i < prdList.size(); i++) {
+//				ProductVO prd = (ProductVO) prdList.get(i);
+//				System.out.println(prd.getPrdNo());
+//			}
+			
+			return prdList;
+		}
+		
+			// ?ƒ?’ˆ ê²??ƒ‰ ?¼2?œ¼ë¡? ?´?™
+			@RequestMapping("/product/productSearchForm2")
+			public String productSearchForm2() {
+				return "product/productSearchForm2";
+			}
+			
+			// ?ƒ?’ˆ ê²??ƒ‰ 
+			@RequestMapping("/product/productSearch2")
+			public String productSearch2(@RequestParam HashMap<String, Object> param, 
+																			Model model){
+				ArrayList<PostVO> prdList = service.productSearch(param);
+				model.addAttribute("prdList", prdList);
+			
+				return "product/productSearchResultView"; // ë·? ?˜?´ì§? ë°˜í™˜ 
+
+		}		
+			
+				// ?ƒ?’ˆ ê²??ƒ‰ ?¼3?œ¼ë¡? ?´?™
+				@RequestMapping("/product/productSearchForm3")
+				public String productSearchForm3() {
+					return "product/productSearchForm3";
+		}
+	}

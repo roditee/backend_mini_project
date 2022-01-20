@@ -10,6 +10,7 @@ import com.boot.backendMiniProject.controller.CartController;
 import com.boot.backendMiniProject.controller.MainController;
 import com.boot.backendMiniProject.controller.MemberController;
 import com.boot.backendMiniProject.controller.ProductController;
+import com.boot.backendMiniProject.dao.IBoardDAO;
 import com.boot.backendMiniProject.dao.ICartDAO;
 import com.boot.backendMiniProject.dao.IMemberDAO;
 
@@ -18,7 +19,11 @@ import com.boot.backendMiniProject.dao.IMemberDAO;
 @ComponentScan(basePackageClasses = MemberController.class)
 @ComponentScan(basePackageClasses = ProductController.class)
 @ComponentScan(basePackageClasses = CartController.class)
+@ComponentScan(basePackageClasses = PostController.class)
 @ComponentScan(basePackageClasses = BoardController.class)
+@MapperScan(basePackageClasses = IProductDAO.class)	
+@MapperScan(basePackageClasses = IPostDAO.class)
+@MapperScan(basePackageClasses = IBoardDAO.class)
 @MapperScan(basePackageClasses = IMemberDAO.class)
 @MapperScan(basePackageClasses = ICartDAO.class)
 public class SpringBootBackendMiniProjectApplication {

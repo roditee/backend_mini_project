@@ -1,0 +1,23 @@
+table {
+	margin: 25px auto;
+    width: 1400px;
+    text-align: center;
+}
+
+#titleRow {
+	height: 75px;
+    font-size: 23px;
+    background: #8d5949;
+}
+
+#secondRow {
+	height: 50px;
+}
+
+#secondRow > th {
+	padding: 23px 0;
+}
+
+.rows {
+	height: 40px;
+}

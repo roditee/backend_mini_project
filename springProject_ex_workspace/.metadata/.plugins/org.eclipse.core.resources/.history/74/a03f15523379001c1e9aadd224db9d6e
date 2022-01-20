@@ -1,0 +1,15 @@
+* {
+	margin:0 auto;
+}
+
+#postBox {
+	text-align: center;
+}
+
+#postTable {
+    margin: 40px auto 0 auto;
+}
+
+tr {
+	height: 60px;
+}

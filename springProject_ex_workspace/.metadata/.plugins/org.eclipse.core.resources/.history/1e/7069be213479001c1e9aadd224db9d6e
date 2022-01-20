@@ -1,0 +1,14 @@
+package com.boot.backendMiniProject.dao;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.boot.backendMiniProject.model.ProductVO;
+
+public interface IProductDAO {
+	
+	ArrayList<ProductVO> listCtgProduct(String ctgId);
+	ProductVO detailViewProduct(String prdNo);// ?ƒ?„¸ ?ƒ?’ˆ ì¡°íšŒ
+	String prdNoCheck(String prdNo); 				//?ƒ?’ˆ ê²??ƒ‰
+	ArrayList<ProductVO> productSearch(HashMap<String, Object> map); // ?ƒ?’ˆ ê²??ƒ‰
+}

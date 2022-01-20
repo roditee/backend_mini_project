@@ -1,0 +1,13 @@
+table {
+	margin: 25px auto;
+    width: 1400px;
+}
+
+#titleRow {
+	height: 75px;
+    font-size: 23px;
+}
+
+#secondRow {
+	height: 50px;
+}

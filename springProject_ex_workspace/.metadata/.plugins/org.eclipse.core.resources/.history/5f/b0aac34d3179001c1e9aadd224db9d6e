@@ -1,0 +1,11 @@
+h3 {
+	font-size: 24px;
+}
+
+#postBox {
+	width:100%;
+}
+#postTable {
+	margin: 27px auto;
+    width: 90%;
+}

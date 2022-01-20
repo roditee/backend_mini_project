@@ -1,0 +1,9 @@
+table {
+	margin: 0 auto;
+    width: 1400px;
+}
+
+#titleRow {
+	height: 75px;
+    font-size: 23px;
+}

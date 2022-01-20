@@ -1,0 +1,17 @@
+table {
+	margin: 25px auto;
+    width: 1400px;
+    text-align: center;
+}
+
+#firstRow {
+	height: 50px;
+}
+
+#secondRow > th {
+	padding: 23px 0;
+}
+
+.rows {
+	height: 40px;
+}

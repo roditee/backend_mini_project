@@ -1,0 +1,18 @@
+package com.boot.backendMiniProject.post;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
+public interface IPostService {
+	// êµ¬í˜„ ?´?˜?Š¤?—?„œ ?˜¤ë²„ë¼?´?”©?•  ì¶”ìƒ ë©”ì†Œ?“œ ?„ ?–¸
+	// ê·œê²© ì§?? • : ë°˜ë“œ?‹œ êµ¬í˜„?•´?•¼ ?•  ë©”ì†Œ?“œ ì§?? •?•´ ?†“?Š” ê²?	
+	ArrayList<PostVO> listAllProduct(); // ì²? ë²ˆì§¸ ë©”ì†Œ?“œ // ? „ì²? ?ƒ?’ˆ ì¡°íšŒ
+	void insertProduct(PostVO prdVo); // prdVoë¥? ë°›ì•„?„œ insert ?•´?•¼?•¨ // ?ƒ?’ˆ ? •ë³? ?“±ë¡?
+	void updateProduct(PostVO prdVo); // ?‚¼?’ˆ ? •ë³? ?ˆ˜? •
+	void deleteProduct(String prdVo);	// ?ƒ?’ˆ ? •ë³? ?‚­? œ 	
+	PostVO detailViewProduct(String prdNo); // ?•˜?‚˜?˜ ?ƒ?’ˆë§? ë³´ë‹ˆê¹? !! // ?ƒ?’ˆ ?ƒ?„¸ ì¡°íšŒ
+	String prdNoCheck(String prdNo);
+	ArrayList<PostVO> productSearch(HashMap<String, Object> map); // ?ƒ?’ˆ ê²??ƒ‰ 
+	
+}
